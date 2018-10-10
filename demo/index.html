@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>slwCtxMenu</title>
+<script type="text/javascript" src="jquery-1.7.min.js"></script>
+<script type="text/javascript" src="../slw.ctxmenu.js"></script>
+<link href="../style/ctxmenu.css" type="text/css" rel="stylesheet" />
+<style>
+.menuDiv {
+	padding: 8px;
+	margin: 10px;
+	border: 1px solid #ccc;
+}
+</style>
+</head>
+
+<body>
+	<h1>slwCtxMenu Demo</h1>
+	<div class="menuDiv" id="menuDiv1">右键菜单1(context menu)</div>
+	<div class="menuDiv" id="menuDiv2">右键菜单2(context menu)</div>
+
+	<ul class="dropdown-menu" id="menu1">
+		<li rel="copy">复制(Copy)</li>
+		<li rel="cut">剪切(Cut)</li>
+		<li rel="del">删除(Del)</li>
+		<li rel="paste">粘贴(Paste)</li>
+	</ul>
+
+
+	<ul class="dropdown-menu" id="menu2">
+		<li rel="copy">复制(Copy)</li>
+		<li rel="cut">剪切(Cut)</li>
+		<li rel="del">删除(Del)</li>
+		<li rel="paste">粘贴(Paste)</li>
+	</ul>
+
+	<script>
+		$(function() {
+			var callbackFun = {
+				'copy' : function(li) {
+					alert('copy');
+				},
+				'cut' : function(li) {
+					alert('cut');
+				},
+				'del' : function(li) {
+					alert('del');
+				},
+				'paste' : function(li) {
+					alert('paste');
+				}
+			};
+			$('#menuDiv1').slwCtxMenu('menu1', {
+				init : function(el, menu) {
+					menu.find('[rel=paste]').hide();
+				},
+				callback : callbackFun
+			});
+			
+			$('#menuDiv2').slwCtxMenu('menu2', {
+				callback : callbackFun
+			});
+			
+		});
+	</script>
+</body>
+</html>
