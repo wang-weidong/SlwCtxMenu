@@ -1,4 +1,4 @@
-# SlwCtxMenu/(Super Lightweight Viewer)
+# SlwCtxMenu/(Super Lightweight Contextmenu)
 
 Javascript contextmenu
 
