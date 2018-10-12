@@ -1,6 +1,8 @@
 /**
- * slwCtxMenu v1.1 2016.6 by WeidongWang 532873584@qq.com
- * slwCtxMenu is released under the MIT license
+ *	https://github.com/wang-weidong/SlwCtxMenu
+ *	
+ *  slwCtxMenu v1.1 2016.6 by WeidongWang 532873584@qq.com
+ *  Released under the MIT license
  */
 (function($) {
 	var menuMap = {};
